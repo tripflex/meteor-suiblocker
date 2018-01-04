@@ -1,0 +1,14 @@
+<template name="SUIBlock">
+  {{#if blocked}}
+
+      <div class="ui segment">
+          <div class="ui active dimmer">
+              {{#if message}}
+                <div class="ui text loader" style="min-width: 90%;">{{message}}</div>
+              {{/if}}
+          </div>
+          <p></p>
+      </div>
+
+  {{/if}}
+</template>
