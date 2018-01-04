@@ -1,12 +1,17 @@
 UI blocker and loader for Meteor using Semantic UI
 =============
 
-![overview](https://raw.githubusercontent.com/VeliovGroup/Meteor-UIBlocker/master/uiblocker.gif)
+![overview](https://raw.githubusercontent.com/tripflex/meteor-suiblocker/master/demo.gif)
 
 Based on [Meteor UIBlocker](https://github.com/VeliovGroup/Meteor-UIBlocker/)
 
 Using the [Semantic UI](https://github.com/Semantic-Org/Semantic-UI/tree/master/dist/components) dimmer, and loader CSS
 https://github.com/Semantic-Org/Semantic-UI/tree/master/dist/components
+
+### Demo
+Live Demo: https://demo-kfvacvnspk.now.sh
+
+Or you can build it yourself using [Meteor Kitchen](http://www.meteorkitchen.com)
 
 ### Installation
 ```shell
