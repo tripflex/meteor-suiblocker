@@ -4,6 +4,8 @@ var SUIBlocker = (function() {
         this.templateInstance = false;
         this.message = new ReactiveVar(false);
         this.open = new ReactiveVar(false);
+
+	    document.addEventListener("backbutton", this.blockBack, false);
     }
 
     SUIBlocker.prototype.block = function(message) {
@@ -22,6 +24,14 @@ var SUIBlocker = (function() {
             this.templateInstance = Blaze.render(Template.SUIBlock, $('body')[0]);
         }
         $('html').addClass('SUIBlocked');
+    };
+
+    SUIBlocker.prototype.blockBack = function( e ){
+    	// Block back button from being used when block is being used
+    	if( this.isBlocked ){
+    		e.preventDefault();
+	    }
+
     };
 
     SUIBlocker.prototype.unblock = function() {
