@@ -8,6 +8,8 @@ Based on [Meteor UIBlocker](https://github.com/VeliovGroup/Meteor-UIBlocker/)
 Using the [Semantic UI](https://github.com/Semantic-Org/Semantic-UI/tree/master/dist/components) dimmer, and loader CSS
 https://github.com/Semantic-Org/Semantic-UI/tree/master/dist/components
 
+As of version 1.1.0, the back button (only on Android) is blocked when UI block is being shown.  When it is not showing, back button still works like normal.
+
 ### Demo
 Live Demo: https://demo-kfvacvnspk.now.sh
 
@@ -78,3 +80,11 @@ Recommended to have main block element right after `body` tag, which wraps all w
   </body>
 </html>
 ```
+
+### Changelog
+
+##### 1.1.0
+- Added event handler to prevent back button on Android while showing blocker
+
+##### 1.0.0
+- Initial Creation

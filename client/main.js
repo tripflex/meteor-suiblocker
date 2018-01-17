@@ -30,8 +30,9 @@ var SUIBlocker = (function() {
     	// Block back button from being used when block is being used
     	if( this.isBlocked ){
     		e.preventDefault();
+	    } else {
+		    window.history.back();
 	    }
-
     };
 
     SUIBlocker.prototype.unblock = function() {
