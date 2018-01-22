@@ -10,8 +10,8 @@
 						{
 							"name": "button",
 							"type": "custom_component",
-							"html": "<template name=\"TEMPLATE_NAME\">\n  \t<h1>Welcome to <a href=\"https://github.com/tripflex/meteor-suiblocker\"><code>tripflex:suiblocker</code></a> package demo!</h1>\n\t<button>Block screen for 4 seconds</button>\n</template>",
-							"js": "Template.TEMPLATE_NAME.events({\n  \n  'click button': function(event, instance) {\n    let remaining = 4;\n    let timer = null;\n    SUIBlock.block(remaining);\n    timer = Meteor.setInterval(function () {\n      SUIBlock.message.set(--remaining);\n      if (remaining < 1) {\n        Meteor.clearInterval(timer);\n        SUIBlock.unblock();\n      }\n    }, 1000);\n  }\n\n});",
+							"html": "<template name=\"TEMPLATE_NAME\">\n  \t<h1>Welcome to <a href=\"https://github.com/tripflex/meteor-suiblocker\"><code>tripflex:suiblocker</code></a> package demo!</h1>\n\t<button id=\"countdown\">Block screen for 4 seconds with countdown</button>\n  \t<button id=\"showClose\">Block screen and show close button</button>\n</template>",
+							"js": "Template.TEMPLATE_NAME.events({\n  \n  'click #countdown': function(event, instance) {\n    let remaining = 4;\n    let timer = null;\n    SUIBlock.block(remaining);\n    timer = Meteor.setInterval(function () {\n      SUIBlock.message.set(--remaining);\n      if (remaining < 1) {\n        Meteor.clearInterval(timer);\n        SUIBlock.unblock();\n      }\n    }, 1000);\n  },\n  \n    \n  'click #showClose': function(event, instance) {\n\n \tSUIBlock.block( 'Click the close button in top right corner to close!', true );\n  }\n\n});",
 							"jsx": "export class TEMPLATE_NAME extends Component {\n\n\tconstructor() {\n\t\tsuper();\n\t}\n\n\tcomponentWillMount() {\n\t\t/*TEMPLATE_CREATED_CODE*/\n\t}\n\n\tcomponentWillUnmount() {\n\t\t/*TEMPLATE_DESTROYED_CODE*/\n\t}\n\n\tcomponentDidMount() {\n\t\t/*TEMPLATE_RENDERED_CODE*/\n\n\t\tMeteor.defer(function() {\n\t\t\tglobalOnRendered();\n\t\t});\n\t}\n\n\trender() {\n\t\treturn (\n\t\t);\n\t}\n}",
 							"gasoline": {
 								"type": "gasoline",

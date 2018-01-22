@@ -4,6 +4,8 @@ var SUIBlocker = (function() {
 		this.templateInstance = false;
 		this.message = new ReactiveVar(false);
 		this.open = new ReactiveVar(false);
+
+    document.addEventListener("backbutton", this.blockBack, false);
 	}
 
   /**
@@ -126,6 +128,15 @@ var SUIBlocker = (function() {
 			return true;
 		}
 	};
+
+  SUIBlocker.prototype.blockBack = function( e ){
+    // Block back button from being used when block is being used
+    if( this.isBlocked ){
+      e.preventDefault();
+    } else {
+      window.history.back();
+    }
+  };
 
 	/**
 	 * Unblock the UI
