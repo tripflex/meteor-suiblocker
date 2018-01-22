@@ -46,7 +46,7 @@
     -ms-user-select: none;
     user-select: none;
     will-change: opacity;
-    z-index: 1000;
+    z-index: 9999999;
 }
 
 /* Dimmer Content */
@@ -139,9 +139,9 @@ body.dimmable > .dimmer {
     -webkit-filter: blur(0px) grayscale(0);
     filter: blur(0px) grayscale(0);
     -webkit-transition: 800ms -webkit-filter ease;
-    transition: 800ms -webkit-filter ease;
-    transition: 800ms filter ease;
-    transition: 800ms filter ease, 800ms -webkit-filter ease;
+    transition: 250ms -webkit-filter ease;
+    transition: 250ms filter ease;
+    transition: 250ms filter ease, 250ms -webkit-filter ease;
 }
 .blurring.dimmed.dimmable > :not(.dimmer) {
     -webkit-filter: blur(5px) grayscale(0.7);
@@ -552,4 +552,37 @@ body.dimmable > .dimmer {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/*---------------------
+    Close Icon
+ ----------------------*/
+.close {
+    position: absolute;
+    right: 32px;
+    top: 32px;
+    width: 32px;
+    height: 32px;
+    opacity: 1;
+    visibility: hidden;
+}
+.close.visible {
+    visibility: visible;
+}
+.close:hover {
+    opacity: 0.8;
+}
+.close:before, .close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #ffffff;
+}
+.close:before {
+    transform: rotate(45deg);
+}
+.close:after {
+    transform: rotate(-45deg);
 }
