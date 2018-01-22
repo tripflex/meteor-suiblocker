@@ -1,6 +1,6 @@
 Package.describe({
     name: 'tripflex:suiblocker',
-    version: '1.0.0',
+    version: '1.0.2',
     summary: 'UI blocker and loading spinner using Semantic UI dimmer and loader CSS',
     git: 'https://github.com/tripflex/meteor-suiblocker',
     documentation: 'README.md'

@@ -78,3 +78,6 @@ Recommended to have main block element right after `body` tag, which wraps all w
   </body>
 </html>
 ```
+
+### Bugs or Feature Requests
+https://github.com/tripflex/meteor-suiblocker
