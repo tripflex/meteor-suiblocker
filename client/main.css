@@ -557,7 +557,7 @@ body {
 /*---------------------
     Close Icon
  ----------------------*/
-.close {
+.ui > #block-close {
     position: absolute;
     right: 32px;
     top: 32px;
@@ -566,13 +566,13 @@ body {
     opacity: 1;
     visibility: hidden;
 }
-.close.visible {
+.ui > #block-close.visible {
     visibility: visible;
 }
-.close:hover {
+.ui > #block-close:hover {
     opacity: 0.8;
 }
-.close:before, .close:after {
+.ui > #block-close:before, .ui > #block-close:after {
     position: absolute;
     left: 15px;
     content: ' ';
@@ -580,9 +580,9 @@ body {
     width: 2px;
     background-color: #ffffff;
 }
-.close:before {
+.ui > #block-close:before {
     transform: rotate(45deg);
 }
-.close:after {
+.ui > #block-close:after {
     transform: rotate(-45deg);
 }

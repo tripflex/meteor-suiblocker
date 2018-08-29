@@ -1,7 +1,7 @@
 <template name="SUIBlock">
   {{#if blocked}}
     <div class="ui page dimmer visible active">
-      <a id="block-close" href="#" class="close" onClick="SUIBlock.unblock()"></a>
+      <a id="block-close" href="#" onClick="SUIBlock.unblock()"></a>
       <div class="content">
         <div class="center">
           {{#if message}}
