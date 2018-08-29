@@ -3,7 +3,7 @@ UI blocker and loader for Meteor using Semantic UI
 
 **_Author:_** Myles McNamara
 
-**_Version:_** 1.2.0
+**_Version:_** 1.2.1
 
 ![overview](https://raw.githubusercontent.com/tripflex/meteor-suiblocker/master/demo.gif)
 
@@ -209,6 +209,11 @@ SUIBlock.unblock();
 
 
 ### Changelog
+##### 1.2.1 *8/29/2018*
+- Prevent back button from being used when UI is blocked
+- use 0 blur for `body`
+- Target `block-close` instead of generic `close` class (props @dolgarev)
+- Removed generic `close` class (props @dolgarev)
 
 ##### 1.2.0 *1/22/2018*
 - Added close button and `showClose` argument to `block` and `blur`
